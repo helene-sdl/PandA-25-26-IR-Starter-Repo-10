@@ -1,8 +1,9 @@
 # Part 10 - Starter
 
-This part builds on your Part 9 solution. Now you will not get too detailed instructions anymore!
+This part builds on your Part 9 solution. You will no longer receive very detailed instructions.
 
-Your task is to introduce two new classes without introducing new features - a refactoring.
+Your task is to introduce two new classes without introducing new features—this is a refactoring exercise.
+
 ## Run the app
 
 ``` bash
@@ -11,13 +12,13 @@ python -m part10.app
 
 ## What to implement (ToDos)
 
-Your ToDos start in `part10/app.py`, but you decide where to move the new classes to. Could be an
-existing module, the `app` module itself, or a new module.
+Your ToDos start in `part10/app.py`, but you decide where to move the new classes. They may live in an existing module, 
+the `app` module itself, or a new module.
 
 0.  First, **copy/redo** your implementation from Part 9.
 
     1. Create `file_utilities.py` and move the `Configuration` class
-        as well as all file related functionality from `app.py` there
+        as well as all file-related functionality from `app.py` there
     2. Re-Introduce the configuration option for the `GREEN` 
         highlighting variant and pass it on to the ``ansi_highlight`` method.
     3. Move `save_config` into the `Configuration` class and rename it.
@@ -31,6 +32,10 @@ existing module, the `app` module itself, or a new module.
     Then, you will add a method (again, choose a good name) that does the search and
     returns the list of `SearchResult`s that are printed at the end.
 
+    This method most likely will need two parameters: The ``query`` from the user (a string), and the current
+    ``search_mode`` (also a string), so your class knows how to combine results for multiple words.
+
 2.  Now that we have three settings, you see that a lot of code is duplicated.
-    You want to find a way of moving that code into a new class. Find a good name
-    and use it three times for each of the settings!
+    Try to find a way of  that code into a new class. Find a good name for it and
+    use it three times for each of the settings! This class, like the one above will contain one method
+    in which you check whether the user changes the corresponding setting. 

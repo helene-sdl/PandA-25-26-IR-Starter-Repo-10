@@ -6,6 +6,7 @@ HELP = """Commands:
   :quit                   Exit the program
   :highlight on|off       Toggle highlighting of matches
   :search-mode AND|OR     Switch search mode (carry-over from Part 4/5)
+  :hl-mode DEFAULT|GREEN  Switch highlight mode between default and green
 
 Usage:
   Enter one or more words to search. Examples:
@@ -19,7 +20,3 @@ Notes:
   - Load Shakespeare's sonnets via PoetryDB (with local caching)
   - Print how long loading and each query took
 """
-
-POETRYDB_URL = "https://poetrydb.org/author,title/Shakespeare;Sonnet"
-
-CACHE_FILENAME = "sonnets.json"
